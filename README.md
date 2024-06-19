@@ -3,7 +3,7 @@
 ## Feedback and Live Review
 
 - [Live Review](https://fylo-dark-theme-landing-page-omega.vercel.app/)
-- [Give feedback on Frontend Mentor platform](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd/hub)
+- [Give feedback on Frontend Mentor platform](https://www.frontendmentor.io/solutions/fylo-frontendmentor-dark-theme-landing-page-1T0SoosmI4)
 
 ## What I Learned
 
