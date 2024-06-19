@@ -1,0 +1,72 @@
+@use '../abstracts' as *;
+
+.testimonials {
+  padding-top: rem(90);
+}
+
+.testimonials .container {
+  display: flex;
+  flex-direction: column;
+  gap: rem(30);
+  
+  @include breakpoint-up('large') {
+    flex-direction: row;
+  }
+}
+
+.testimonials__card {
+  position: relative;
+  border-radius: 1em;
+  background-color: $card-bg;
+  padding: rem(24);
+  
+  @include breakpoint-up('medium') {
+    margin: 0 auto;
+    width: rem(500);
+  }
+}
+
+.testimonials__quotes {
+  position: absolute;
+  top: -#{rem(40)};
+  left: 0;
+  z-index: -1;
+}
+
+.testimonials__person {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(16);
+}
+
+.testimonials__text {
+  flex-basis: 100%;
+  order: 1;
+}
+
+.testimonials__img {
+  align-self: center;
+  order: 2;
+  border-radius: 50%;
+  height: rem(40);
+  width: rem(40);
+}
+
+.testimonials__figcaption {
+  align-self: center;
+  order: 3;
+}
+
+.testimonials__name,
+.testimonials__job {
+  margin: 0;
+}
+
+.testimonials__name {
+  font-size: rem(14);
+}
+
+.testimonials__job {
+  font-size: rem(12);
+  font-weight: 400;
+}

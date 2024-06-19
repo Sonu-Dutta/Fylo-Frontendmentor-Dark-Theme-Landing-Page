@@ -1,0 +1,106 @@
+@use '../abstracts' as *;
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: $selection-bg;
+  color: $white;
+}
+
+::-moz-selection {
+  background-color: $selection-bg;
+  color: $white;
+}
+
+html {
+  font-size: $default-html-font-size;
+}
+
+body {
+  background-color: $body-bg;
+  color: $white;
+  font-family: 'Open Sans';
+  font-size: rem(14);
+  
+  @include breakpoint-up('medium') {
+    font-size: rem(15);
+  }
+  
+  @include breakpoint-up('large') {
+    font-size: rem(16);
+  }
+}
+
+// h1 - h6
+@for $i from 1 through 6 {
+  h#{$i} {
+    margin: rem(12) 0;
+    line-height: 1.6;
+    font-family: $headings-ff;
+    
+    @include breakpoint-up('large') {
+      margin: rem(16) 0;
+    }
+  }
+}
+
+p,
+blockquote {
+  margin: rem(12) 0;
+  line-height: 1.6;
+  
+  @include breakpoint-up('large') {
+    margin: rem(16) 0;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+// Screen Reader Class
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+          clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+// Bot Input
+.hidden {
+  display: none;
+}

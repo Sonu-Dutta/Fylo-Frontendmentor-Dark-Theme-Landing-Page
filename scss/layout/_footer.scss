@@ -1,0 +1,150 @@
+@use '../abstracts' as *;
+
+.footer {
+  background-color: $footer-bg;
+  padding-top: rem(240);
+  padding-bottom: rem(90);
+  font-size: rem(16);
+  
+  @include breakpoint-down('very-small') {
+    font-size: rem(14);
+  }
+}
+
+.footer__container {
+  margin-top: rem(50);
+  
+  @include breakpoint-up('large') {
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(40);
+  }
+}
+
+.footer__home {
+  display: inline-block;
+  
+  @include focus-visible;
+}
+
+.footer__logo {
+  display: inline-block;
+}
+
+.info {
+  
+  @include breakpoint-down('large') {
+    margin: rem(50) 0;
+  }
+}
+
+.info__physical-address,
+.info__container {
+  display: flex;
+  align-items: flex-start;
+  gap: rem(20);
+}
+
+.info__physical-address .info__icon {
+  margin-top: rem(8);
+}
+
+.info__container {
+  margin-top: rem(20);
+}
+
+.info__description,
+.info__link {
+  margin: 0;
+}
+
+.info__link {
+  color: $white;
+  
+  @include focus-visible;
+  @include on-event {
+    text-decoration: underline;
+  }
+}
+
+.footer__list {
+  
+  @include breakpoint-up('large') {
+    column-count: 2;
+  }
+}
+
+.footer__item {
+  line-height: 2.5;
+}
+
+.footer__item:nth-child(5) {
+  margin-top: rem(30);
+}
+
+.footer__link {
+  color: $white;
+  
+  @include focus-visible;
+  @include on-event {
+    font-weight: 700;
+  }
+}
+
+.social {
+  display: flex;
+  gap: rem(16);
+  justify-content: center;
+  margin-top: rem(50);
+  
+  @supports not (gap: rem(16)) {
+    & > * + * {
+      margin-left: rem(16);
+    }
+  }
+  
+  @include breakpoint-up('large') {
+    margin-top: 0;
+  }
+}
+
+.social__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: rem(1) solid $white;
+  border-radius: 50%;
+  cursor: pointer;
+  height: rem(50);
+  width: rem(50);
+  
+  @include on-event {
+    border-color: $cyan;
+    
+    .social__icon path {
+      fill: $cyan;
+    }
+  }
+  
+  @include breakpoint-down('very-small') {
+    height: rem(36);
+    width: rem(36);
+  }
+}
+
+.social__link {
+  line-height: 0;
+  
+  @include focus-visible;
+}
+
+.social__icon {
+  height: rem(25);
+  width: rem(25);
+  
+  @include breakpoint-down('very-small') {
+    height: rem(18);
+    width: rem(18);
+  }
+}

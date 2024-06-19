@@ -1,0 +1,70 @@
+@use '../abstracts' as *;
+
+.hero {
+  background-color: $hero-bg;
+  background-image: url('../images/bg-curvy-mobile.svg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: rem(330);
+  overflow-y: visible;
+  
+  @include breakpoint-up('small') {
+    height: rem(500);
+  }
+  
+  @include breakpoint-up('medium') {
+    height: rem(550);
+  }
+  
+  @include breakpoint-up('large') {
+    background-image: url('../images/bg-curvy-desktop.svg');
+    height: rem(750);
+  }
+  
+  @include breakpoint-up('very-large') {
+    height: rem(1000);
+  }
+}
+
+.hero__text {
+  margin-top: rem(20);
+  text-align: center;
+  
+  @include breakpoint-up('medium') {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: rem(600);
+  }
+}
+
+.hero__title {
+  font-size: rem(24);
+  
+  @include breakpoint-up('medium') {
+    font-size: rem(28);
+  }
+  
+  @include breakpoint-up('large') {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: rem(600);
+    font-size: rem(32);
+  }
+}
+
+.hero__image {
+    
+  @include breakpoint-up('small') {
+    margin: 0 auto;
+    max-width: rem(400);
+  }
+  
+  @include breakpoint-up('medium') {
+    max-width: rem(500);
+  }
+  
+  @include breakpoint-up('very-large') {
+    max-width: rem(900);
+  }
+}

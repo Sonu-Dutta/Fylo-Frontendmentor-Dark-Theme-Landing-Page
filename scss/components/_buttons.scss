@@ -1,0 +1,37 @@
+@use '../abstracts' as *;
+
+.btn {
+  display: inline-block;
+  margin: rem(10) 0;
+  border: none;
+  cursor: pointer;
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn--cta {
+  border-radius: 5em;
+  background-image: linear-gradient(
+    150deg,
+    $btn-cta-gradient-1,
+    40%,
+    $btn-cta-gradient-2
+  );
+  padding: rem(14) rem(75);
+  overflow: hidden;
+  color: $white;
+  font-family: $btn-cta-ff;
+  font-weight: 700;
+  
+  @include focus-visible;
+  @include on-event {
+    background-image: linear-gradient(
+      150deg,
+      tint($btn-cta-gradient-1, 40%),
+      40%,
+      tint($btn-cta-gradient-2, 40%)
+    );
+  }
+}

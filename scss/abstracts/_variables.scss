@@ -1,0 +1,61 @@
+// Default style that I currently use on this project
+$default-html-font-size: 100% !default;
+$black: rgb(17, 17, 17) !default;
+$white: rgb(255, 255, 255) !default;
+
+// Styles for this specific project
+// Font family
+$raleway-font-family: 'Raleway';
+
+// Use Cases
+$headings-ff: $raleway-font-family;
+$btn-cta-ff: $raleway-font-family;
+$navigation-ff: $raleway-font-family;
+
+// Primary Color
+$dark-blue-100: hsl(219, 30%, 18%);
+$dark-blue-200: hsl(217, 28%, 15%);
+$dark-blue-300: hsl(218, 28%, 13%);
+$dark-blue-400: hsl(216, 53%, 9%);
+
+// Use Cases
+$header-bg: $dark-blue-200;
+$body-bg: $dark-blue-300;
+$hero-bg: $dark-blue-200;
+$card-bg: $dark-blue-100;
+$cta-bg: $dark-blue-200;
+$footer-bg: $dark-blue-400;
+
+// Accent Color
+$cyan: hsl(176, 68%, 64%);
+$blue: hsl(198, 60%, 50%);
+$light-red: hsl(0, 100%, 63%);
+
+// Use Cases
+$selection-bg: $cyan;
+$btn-cta-gradient-1: $cyan;
+$btn-cta-gradient-2: $blue;
+$cta-error-message-color: $light-red;
+$productive-link-color: $cyan;
+
+// Breakpoints
+// Note: If you user font-size setting is 16px, then this 'em' is equal to this 'px'
+$breakpoints-up: (
+  'tiny': 20em, // => 320px
+  'very-small': 22.5em, // => 360px
+  'small': 40em, // => 640px
+  'medium': 48em, // => 768px
+  'large': 64em, // => 1024px
+  'very-large': 80em, // => 1280px
+  'gigantic': 90em, // => 1440px
+);
+
+$breakpoints-down: (
+  'tiny': 19.9375em, // => 319px
+  'very-small': 22.4375em, // => 359px
+  'small': 39.9375em, // => 639px
+  'medium': 47.9375em, // => 767px
+  'large': 63.9375em, // => 1023px
+  'very-large': 79.9375em, // => 1279px
+  'gigantic': 89.9375em, // => 1439px
+);

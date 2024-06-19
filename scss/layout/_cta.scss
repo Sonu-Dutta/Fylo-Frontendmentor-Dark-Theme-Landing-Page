@@ -1,0 +1,107 @@
+@use '../abstracts' as *;
+
+.cta {
+  position: relative;
+  top: rem(180);
+}
+
+.cta__card {
+  margin: 0 auto;
+  border-radius: 1em;
+  box-shadow: rem(10) rem(10) rem(20) rgba(0,0,0,0.4);
+  background-color: $cta-bg;
+  padding: rem(32) rem(18);
+  text-align: center;
+  
+  @include breakpoint-up('medium') {
+    width: rem(500);
+  }
+  
+  @include breakpoint-up('large') {
+    width: rem(800);
+  }
+}
+
+.cta__title {
+  font-size: rem(20);
+  
+  @include breakpoint-up('medium') {
+    font-size: rem(24);
+  }
+  
+  @include breakpoint-up('large') {
+    font-size: rem(40);
+  }
+}
+
+.cta__description {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.cta__form {
+  margin-top: rem(20);
+}
+
+.cta__email {
+  display: block;
+  border: none;
+  border-radius: 5em;
+  padding: rem(14);
+  padding-right: rem(30);
+  width: 100%;
+  font-size: rem(14);
+  
+  @include focus-visible;
+}
+
+.cta__form .btn {
+  display: block;
+  height: rem(44);
+  width: 100%;
+  padding: rem(14);
+}
+
+.form-control {
+  position: relative;
+  
+  @include breakpoint-up('large') {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 55% 40%;
+  }
+}
+
+.placeholder {
+  margin-top: rem(5);
+  height: rem(12);
+  
+  @include breakpoint-up('large') {
+    position: absolute;
+    bottom: -#{rem(20)};
+    left: 0;
+    margin: 0;
+  }
+}
+
+.cta__error-message {
+  display: none;
+  padding-left: rem(14);
+  text-align: left;
+  color: $cta-error-message-color;
+  font-size: rem(12);
+  font-weight: 700;
+}
+
+// Email validation
+.cta__email:focus:invalid ~ .placeholder .cta__error-message {
+  display: block;
+}
+
+.cta__email:valid {
+  background-image: url('../images/check-mark.svg');
+  background-position: center right rem(10);
+  background-repeat: no-repeat;
+  background-size: rem(16);
+}

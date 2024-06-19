@@ -1,0 +1,58 @@
+@use '../abstracts' as *;
+
+.header {
+  background-color: $header-bg;
+  padding: rem(20) 0;
+  
+  @include breakpoint-up('large') {
+    padding: rem(40) 0;
+  }
+  
+  @include breakpoint-up('very-large') {
+    padding: rem(60) 0;
+  }
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__home {
+  flex-basis: rem(100);
+  
+  @include focus-visible;
+  @include breakpoint-down('very-small') {
+    flex-basis: rem(80);
+  }
+  
+  @include breakpoint-up('large') {
+    flex-basis: rem(180);
+  }
+}
+
+.header__list {
+  display: flex;
+  gap: rem(20);
+  
+  @supports not (gap: rem(20)) {
+    & > * + * {
+      margin-left: rem(20);
+    }
+  }
+}
+
+.header__link {
+  color: $white;
+  font-family: $navigation-ff;
+  
+  @include focus-visible;
+  @include on-event {
+    text-decoration: underline;
+  }
+  
+  @include breakpoint-down('very-small') {
+    font-size: rem(12);
+  }
+}
