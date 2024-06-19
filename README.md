@@ -1,4 +1,4 @@
-![Fylo Dark Theme Landing Page](/images/project1-ss.png) (/images/project2-ss.png)
+![Fylo Dark Theme Landing Page](/images/project1-ss.png) !(/images/project2-ss.png)
 
 ## Feedback and Live Review
 
